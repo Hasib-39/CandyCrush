@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <meta charset = "UTF-8">
+      <meta name="viewport" content ="width=device-width, intial-scale=1.0">
+      <title>Cany Crush</title>
+      <link rel = "stylesheet" href="candy.css">
+      <script src = "candy.js"></script>
+    </head>
+    <body>
+      <div class="score_box"> <h1>Score: <span id = "score">0</span></h1></div>
+      <div id="board"></div>
+      <button id="play">Enable Sound</button>
+      <script>
+        let play = document.getElementById("play");
+        function playSound () {
+            let audio = new Audio("./audio.mp3");
+            audio.play();
+            setTimeout(() =>{
+              audio.pause();
+              audio.currentTime = 0;
+            },30000);
+        }
+        play.addEventListener("click", playSound);
+      </script>
+    </body>
+  </html>
